@@ -1,3 +1,2 @@
-res://levels/level0/level_0.tscn
-res://player/player.tscn
 res://player/player.gd
+res://levels/level0/level_0.tscn

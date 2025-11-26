@@ -14,8 +14,8 @@ func _physics_process(delta):
 	else:
 		velocity.x = 0
 		
-	if Input.is_action_just_pressed("thrust"):
-		velocity.y = -thrust_force
+	if Input.is_action_just_pressed("thrust") and fuel >= 0:
+		velocity.y = - thrust_force
 		use_fuel(1)
 	# Todo: Add left / right thrust movement
 		
@@ -24,10 +24,11 @@ func _physics_process(delta):
 	if velocity.y < 0:
 		rotation_degrees = -20
 	if velocity.y > 0:
-		rotation_degrees = 45         
+		rotation_degrees = 45
 	if velocity.y == 0:
 		rotation_degrees = 0
 	move_and_slide()
 
 func use_fuel(fuel_used):
 	fuel -= fuel_used
+	print("Fuel: " + str(fuel))
