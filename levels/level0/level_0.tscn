@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dgstx7t4f4kt4"]
+[gd_scene load_steps=8 format=4 uid="uid://dgstx7t4f4kt4"]
 
 [ext_resource type="Texture2D" uid="uid://3nsiqgft7n0c" path="res://levels/level0/grey-square-50.png" id="2_dg7gn"]
 [ext_resource type="PackedScene" uid="uid://dgs1e4e53hijv" path="res://player/player.tscn" id="2_vf188"]
+[ext_resource type="PackedScene" uid="uid://dtn5n6u7643fb" path="res://obstacles/trees/tree01/tree_01.tscn" id="3_dg7gn"]
+[ext_resource type="PackedScene" uid="uid://hiabce1fcrd3" path="res://obstacles/towers/tower01/tower_01.tscn" id="4_3mult"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vf188"]
 
@@ -26,3 +28,9 @@ physics_quadrant_size = 50
 
 [node name="Player" parent="." instance=ExtResource("2_vf188")]
 position = Vector2(148, 403)
+
+[node name="tree01" parent="." instance=ExtResource("3_dg7gn")]
+position = Vector2(687, 649)
+
+[node name="tower01" parent="." instance=ExtResource("4_3mult")]
+position = Vector2(1212, 506)
